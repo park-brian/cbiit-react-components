@@ -9,5 +9,7 @@
 
 .table thead th{border-bottom:1px solid #ddd}.table td{overflow-x:auto;word-wrap:break-word}.table.table-striped th,.table.table-striped td{border-top:none}.table.table-striped tbody tr:nth-of-type(odd){background-color:#fafafa}.pagination{justify-content:flex-end}.pagination .page-item .page-link{color:#595959}.pagination .page-item.active .page-link{background-color:transparent;color:#007ea7;font-weight:600;text-decoration:underline}.pagination .page-link:focus{box-shadow:none}
 
+.navlinks{text-decoration:none !important;font-weight:700;color:white}.navlinks:hover{color:#ddd !important}.navlinks.active-navlinks:hover{color:#444 !important}.active-navlinks{background-color:#2cc799 !important;color:#333c4e !important}.active-navlinks button{background-color:white !important;color:black !important;font-weight:700 !important}
 
-/*# sourceMappingURL=main.3f33becf.chunk.css.map*/
+
+/*# sourceMappingURL=main.00eba65f.chunk.css.map*/
