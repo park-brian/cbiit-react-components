@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import { Icon } from '../components/icon/icon';
 import '../components/index.scss';
 
