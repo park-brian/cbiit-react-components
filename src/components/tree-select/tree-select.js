@@ -11,7 +11,8 @@ export const TreeSelect = forwardRef(({
     onChange,
     data,
     value,
-    singleSelect
+    singleSelect,
+    style
   }, ref) => {
 
   useImperativeHandle(ref, () => ({
@@ -19,7 +20,7 @@ export const TreeSelect = forwardRef(({
       clearSearchFilter();
       collapseAllParents();
     },
-    expandSelectedPhenotype(displayTreeParent) {
+    expandSelectedvalue(displayTreeParent) {
       collapseAllParents();
       expandParents(displayTreeParent);
     }
@@ -378,7 +379,7 @@ export const TreeSelect = forwardRef(({
           <li className="my-1" style={{ display: 'block' }}>
             <div className="d-flex align-items-center">
               <button
-                title={"Show/hide " + item.title + " phenotypes"}
+                title={"Show/hide " + item.title + " values"}
                 style={{ all: 'unset' }}
                 className="collapse-button text-secondary"
                 onClick={e => toggleHideChildren(item.id)}>
@@ -397,8 +398,8 @@ export const TreeSelect = forwardRef(({
               <input
                 title={
                   singleSelect
-                    ? 'Unable to select all ' + item.title + ' phenotypes\nOnly one phenotype can be selected'
-                    : 'Select/deselect all ' + item.title + ' phenotypes'
+                    ? 'Unable to select all ' + item.title + ' values\nOnly one value can be selected'
+                    : 'Select/deselect all ' + item.title + ' values'
                 }
                 style={{
                   verticalAlign: 'middle',
@@ -425,7 +426,7 @@ export const TreeSelect = forwardRef(({
               />
 
               <button
-                title={singleSelect? "Show/hide " + item.title + " phenotypes" : 'Select/deselect all ' + item.title + ' phenotypes'}
+                title={singleSelect? "Show/hide " + item.title + " values" : 'Select/deselect all ' + item.title + ' values'}
                 className="ml-1"
                 style={{
                   all: 'unset',
@@ -466,7 +467,7 @@ export const TreeSelect = forwardRef(({
               }}
             />
             <input
-              title={singleSelect ? "Select " + item.title + " phenotype" : "Select/deselect " + item.title + " phenotype"}
+              title={singleSelect ? "Select " + item.title + " value" : "Select/deselect " + item.title + " value"}
               style={{ 
                 cursor: 'pointer' 
               }}
@@ -512,7 +513,7 @@ export const TreeSelect = forwardRef(({
       }
     });
 
-  // construct flat list of phenotypes (only show for search filter)
+  // construct flat list of values (only show for search filter)
   const selectTreeAlphabetical = () => {
     const stringMatch = item => {
       // console.log("searchInput", searchInput);
@@ -534,7 +535,7 @@ export const TreeSelect = forwardRef(({
             overflow: 'hidden'
           }}>
           <input
-            title={"Select " + item.title + " phenotype"}
+            title={"Select " + item.title + " value"}
             style={{ cursor: 'pointer' }}
             className={'ml-0 leaf-checkbox-' + item.id}
             // name={'leaf-checkbox-' + item.id}
@@ -581,11 +582,11 @@ export const TreeSelect = forwardRef(({
         </div>
       ));
     } else {
-      return <div className="p-2">No phenotypes found.</div>;
+      return <div className="p-2">No values found.</div>;
     }
   };
 
-  // select all phenotypes when checkbox is toggled
+  // select all values when checkbox is toggled
   const selectAll = () => {
     if (!data) return;
     if (checkAllLeafsSelected()) {
@@ -621,13 +622,14 @@ export const TreeSelect = forwardRef(({
           // whiteSpace: 'nowrap',
           // maxHeight: '250px',
           borderColor: '#dee2e6',
-          fontSize: '10pt'
+          fontSize: '10pt',
+          ...style
         }}>
-        <div className="bg-secondary border-bottom d-flex align-items-center py-1">
+        <div className="bg-light border-bottom d-flex align-items-center py-1">
           {listType === 'categorical' && (
             <>
               <button
-                title={expandAll ? "Hide all phenotypes" : "Show all phenotypes"}
+                title={expandAll ? "Hide all values" : "Show all values"}
                 style={{ all: 'unset' }}
                 className="ml-1 collapse-button-all text-secondary"
                 onClick={e => toggleExpandAllParents()}
@@ -652,7 +654,7 @@ export const TreeSelect = forwardRef(({
           )}
 
           <input
-            title={singleSelect ? 'Only one phenotype can be selected' : 'Select/deselect all'}
+            title={singleSelect ? 'Only one value can be selected' : 'Select/deselect all'}
             style={{ cursor: singleSelect || !data ? 'not-allowed' : 'pointer' }}
             className={listType === 'alphabetical' ? 'ml-1' : ''}
             // name=""
@@ -676,9 +678,9 @@ export const TreeSelect = forwardRef(({
             <input
               className="form-control py-1 h-100 border-right-0"
               style={{ display: 'block' }}
-              title="Search Phenotype"
-              placeholder="Search Phenotype"
-              aria-label="Search Phenotype"
+              title="Search value"
+              placeholder="Search value"
+              aria-label="Search value"
               value={searchInput}
               onChange={e => {
                 setSearchInput(e.target.value);
