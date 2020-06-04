@@ -18,6 +18,8 @@
 }
 
 .pagination {
+    justify-content: flex-end;
+
     .page-item .page-link {
         color: #595959;
     }
