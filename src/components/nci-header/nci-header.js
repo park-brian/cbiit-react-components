@@ -21,5 +21,4 @@ export function NCIHeader({
             />
         </a>
     </header>
-    
 }
