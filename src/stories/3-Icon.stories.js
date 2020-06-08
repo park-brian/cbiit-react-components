@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '../components/icon/icon';
+import { CodeRenderer } from '../components/code-renderer/code-renderer'
 import '../components/index.scss';
 
 export default {
@@ -13,5 +14,6 @@ export function Examples() {
     return iconNames.map(name => <div className="m-2">
       <Icon name={name} />
       <small className="text-muted ml-2">({name})</small>
+      <CodeRenderer code={`<Icon name="${name}" />`} />
     </div>)
 }
