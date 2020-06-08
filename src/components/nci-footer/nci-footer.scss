@@ -1,0 +1,19 @@
+.bg-primary-dark {
+    background-color: #123e57;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links.inline > li {
+    display: inline;
+    padding: 2rem;
+    font-size: 0.8rem;
+}
+
+.footer-links > li > a {
+    color: white;
+    font-weight: bold;
+}
