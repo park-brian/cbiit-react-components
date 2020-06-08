@@ -36,7 +36,7 @@ function Example() {
   }
 
   return <div className="container border">
-    <LoadingOverlay active={loading}>Custom Overlay Component</LoadingOverlay>
+    <LoadingOverlay active={loading}>Custom Overlay</LoadingOverlay>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
     <Button variant="light" onClick={handleClick}>Show Loading Overlay</Button>
   </div>
@@ -90,7 +90,7 @@ export function Custom() {
 
   return <div className="m-2">
     <div className="mb-2 p-2 border">
-      <LoadingOverlay active={loading} />
+      <LoadingOverlay active={loading}>Custom Overlay</LoadingOverlay>
       <p>{text}</p>
       <Button variant="light" onClick={handleClick}>Show Loading Overlay</Button>
     </div>
