@@ -62,6 +62,90 @@ function Example() {
   </div>
 }`.trimLeft();
 
+
+
+const APICode = `
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import { LoadingOverlay } from 'cbiit-react-components/loading-overlay/loading-overlay';
+  
+
+  function Example() {
+    const [loading, setLoading] = useState(false);
+    function handleClick() {
+      setLoading(true);
+      setTimeout(() => setLoading(false), 3000);
+    }
+  
+    return <div className="container border">
+      <LoadingOverlay active={loading} />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      <Button variant="light" onClick={handleClick}>Show Loading Overlay</Button>
+    </div>
+  }
+
+  ReactDOM.render(
+    <Example />
+    document.getElementById('body')
+  );
+`;
+
+export function API() {
+  return <div className="m-2">
+    <h1>Getting Started</h1>
+    <p>The LoadingOverlay component renders an overlay over an element which disables interaction with any components within the element.</p>
+    <CodeRenderer code={APICode} />
+
+    <h1>Properties</h1>
+    <table className="table">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>children</td>
+          <td>Array&lt;React.Component&gt;</td>
+          <td>Any children of the LoadingOverlay component will be rendered (transcluded) overlay, overriding the default loader.</td>
+        </tr>
+        <tr>
+          <td>children</td>
+          <td>Boolean</td>
+          <td>Specifies whether the LoadingOverlay is visible or not.</td>
+        </tr>
+
+        <tr>
+          <td>active</td>
+          <td>Boolean</td>
+          <td>Specifies whether the LoadingOverlay is visible or not.</td>
+        </tr>
+
+        <tr>
+          <td>overlayClass</td>
+          <td>String</td>
+          <td>Specifies additional classes to apply to the overlay element.</td>
+        </tr>
+
+        <tr>
+          <td>overlayStyle</td>
+          <td>Object</td>
+          <td>Specifies additional styles to apply to the overlay element.</td>
+        </tr>
+
+        <tr>
+          <td>overlayProps</td>
+          <td>Object</td>
+          <td>Specifies additional properties to apply to the overlay element.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+}
+
+
 export function Example() {
   const [loading, setLoading] = useState(false);
   function handleClick() {
@@ -77,7 +161,7 @@ export function Example() {
     </div>
     <CodeRenderer code={ExampleCode} />
   </div>
-  
+
 }
 
 
@@ -96,7 +180,7 @@ export function Custom() {
     </div>
     <CodeRenderer code={CustomCode} />
   </div>
-  
+
 }
 
 
@@ -107,12 +191,12 @@ export function CustomStyle() {
     setTimeout(() => setLoading(false), 3000);
   }
 
-  
+
   return <div className="m-2">
     <div className="mb-2 p-2 border">
-      <LoadingOverlay active={loading} overlayStyle={{backgroundColor: '#222'}}>
+      <LoadingOverlay active={loading} overlayStyle={{ backgroundColor: '#222' }}>
         <div className="text-light">
-        Custom Overlay Style
+          Custom Overlay Style
         </div>
       </LoadingOverlay>
       <p>{text}</p>
