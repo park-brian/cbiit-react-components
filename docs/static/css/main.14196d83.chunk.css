@@ -11,7 +11,7 @@
 
 .navlinks{text-decoration:none !important;font-weight:700;color:white}.navlinks:hover{color:#ddd !important}.navlinks.active-navlinks:hover{color:#444 !important}.active-navlinks{background-color:#2cc799 !important;color:#333c4e !important}.active-navlinks button{background-color:white !important;color:black !important;font-weight:700 !important}
 
-.bg-primary-dark{background-color:#123e57}.footer-links{list-style:none;padding-left:0}.footer-links.inline>li{display:inline;padding:2rem;font-size:0.8rem}.footer-links>li>a{color:white;font-weight:bold}
+.bg-primary-dark{background-color:#123e57}.footer-links{list-style:none;padding-left:0}.footer-links.inline>li{display:inline-block;padding:1rem 2rem;font-size:0.8rem}.footer-links>li>a{display:inline-block;color:white;font-weight:bold;margin-bottom:0.5rem}
 
 
-/*# sourceMappingURL=main.75c02c6b.chunk.css.map*/
+/*# sourceMappingURL=main.14196d83.chunk.css.map*/
