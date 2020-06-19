@@ -4,16 +4,23 @@ import {
   containsVal, 
   containsAllVals, 
   removeVal, 
-  removeAllVals
+  removeAllVals,
+  flattenTree
 } from './tree-select-utils';
 
 export const TreeSelect = forwardRef(({
     onChange,
-    data,
+    data: tree,
     value,
     singleSelect,
     style
   }, ref) => {
+    
+  let data = {
+    tree,
+    categories: tree, 
+    flat: flattenTree(tree),
+  };
 
   useImperativeHandle(ref, () => ({
     resetSearchFilter() {

@@ -33,3 +33,15 @@ export const removeAllVals = (arr, vals) => {
   }
   return arr;
 };
+
+export const flattenTree = (nodes) => {
+  let children = [];
+  nodes.forEach(addChildren);
+  function addChildren(node) {
+    children.push(node);
+    if (node.children)
+      node.children.forEach(addChildren);
+  }
+  return children;
+}
+
