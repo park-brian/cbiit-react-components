@@ -3,7 +3,7 @@ import React from 'react';
 const iconDefaults = {
   path: 'assets/icons/',
   width: 10,
-  extension: '.svg',
+  extension: 'svg',
 };
 
 export const Icon = props => (
