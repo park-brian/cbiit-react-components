@@ -6,8 +6,8 @@ export function NCIHeader({
     imageClassName = '',
     imageStyle = {maxWidth: '80%'},
     imageProps = {},
-    imageSource = 'assets/images/nci-logo.svg',
-    url = 'https://www.cancer.gov/'
+    imageSource = '',
+    url = ''
 }) {
     return <header className={className} style={style}>
         <a href={url} target="_blank" rel="noopener noreferrer">
@@ -16,7 +16,7 @@ export function NCIHeader({
                 style={imageStyle}
                 className={imageClassName}
                 height="80" 
-                alt="National Cancer Institute Logo" 
+                alt="Header Logo" 
                 {...imageProps}
             />
         </a>

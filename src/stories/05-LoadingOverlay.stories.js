@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from '../components/button/button';
-import { LoadingOverlay } from '../components/loading-overlay/loading-overlay';
-import '../components/index.scss';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
+import { Button } from '../button/button';
+import { LoadingOverlay } from '../loading-overlay/loading-overlay';
+import '../index.scss';
+import { CodeRenderer } from '../code-renderer/code-renderer';
 
 export default {
   title: 'LoadingOverlay',
@@ -26,7 +26,7 @@ export function Documentation() {
 
     <section className="mb-4">
       <h2>Import</h2>
-      <CodeRenderer code={`import { LoadingOverlay } from 'cbiit-react-components/loading-overlay/loading-overlay';`} />
+      <CodeRenderer code={`import { LoadingOverlay } from '@cbiitss/react-components';`} />
     </section>
 
     <section className="mb-4">

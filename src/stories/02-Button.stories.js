@@ -1,8 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '../components/button/button';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
-import '../components/index.scss';
+import { Button } from '../button/button';
+import { CodeRenderer } from '../code-renderer/code-renderer';
+import '../index.scss';
 
 export default {
   title: 'Button',
@@ -16,7 +16,7 @@ export function Documentation() {
 
     <section className="mb-4">
       <h2>Import</h2>
-      <CodeRenderer code="import { Button } from cbiit-react-components/components/button/button;" />
+      <CodeRenderer code="import { Button } from '@cbiitss/react-components';" />
     </section>
 
     <section className="mb-4">

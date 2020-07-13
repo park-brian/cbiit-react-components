@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Navbar } from '../components/navbar/navbar';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
-import '../components/index.scss';
+import { Navbar } from '../navbar/navbar';
+import { CodeRenderer } from '../code-renderer/code-renderer';
+import '../index.scss';
 
 export default {
   title: 'Navbar',
@@ -29,7 +29,7 @@ export function Documentation() {
 
       <section className="mb-4">
           <h2>Import</h2>
-          <CodeRenderer code="import { Navbar } from 'cbiit-react-components/navbar/navbar';" />
+          <CodeRenderer code="import { Navbar } from '@cbiitss/react-components';" />
       </section>
 
       <section className="mb-4">

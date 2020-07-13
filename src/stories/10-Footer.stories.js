@@ -1,7 +1,7 @@
 import React from 'react';
-import { NCIFooter } from '../components/nci-footer/nci-footer';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
-import '../components/index.scss';
+import { NCIFooter } from '../nci-footer/nci-footer';
+import { CodeRenderer } from '../code-renderer/code-renderer';
+import '../index.scss';
 
 export default {
   title: 'NCI Footer',
@@ -17,7 +17,7 @@ export function Documentation() {
 
       <section className="mb-4">
           <h2>Import</h2>
-          <CodeRenderer code="import { NCIFooter } from 'cbiit-react-components/nci-footer/nci-footer';" />
+          <CodeRenderer code="import { NCIFooter } from '@cbiitss/react-components';" />
       </section>
 
       <section className="mb-4">

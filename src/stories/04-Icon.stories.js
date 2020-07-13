@@ -1,7 +1,7 @@
 import React from 'react';
-import { Icon } from '../components/icon/icon';
-import { CodeRenderer } from '../components/code-renderer/code-renderer'
-import '../components/index.scss';
+import { Icon } from '../icon/icon';
+import { CodeRenderer } from '../code-renderer/code-renderer'
+import '../index.scss';
 
 export default {
     title: 'Icon',
@@ -16,7 +16,7 @@ export function Documentation() {
 
         <section className="mb-4">
             <h2>Import</h2>
-            <CodeRenderer code="import { Icon } from 'cbiit-react-components/icon/icon';" />
+            <CodeRenderer code="import { Icon } from '@cbiitss/react-components';" />
         </section>
 
         <section className="mb-4">

@@ -1,8 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '../components/button/button';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
-import '../components/index.scss';
+import { Button } from '../button/button';
+import { CodeRenderer } from '../code-renderer/code-renderer';
+import '../index.scss';
 
 export default {
   title: 'Getting Started',
@@ -20,7 +20,7 @@ export function Introduction() {
 
     <section className="mb-4">
       <h2>Installation</h2>
-      <CodeRenderer code="npm install --save @cbiit/react-components" />
+      <CodeRenderer code="npm install --save @cbiitss/react-components" />
     </section>
 
     <section className="mb-4">
@@ -31,10 +31,10 @@ export function Introduction() {
         import ReactDOM from 'react-dom';
 
         // Import CSS at the root level
-        import '@cbiit/react-components/components/index.scss'; 
+        import '@cbiitss/react-components/src/index.scss'; 
 
         // For example, import the Button component
-        import { Button } from '@cbiit/react-components/components/button/button';
+        import { Button } from '@cbiitss/react-components';
 
         // Render the button under the document's #root element
         ReactDOM.render(

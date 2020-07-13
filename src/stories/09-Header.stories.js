@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { NCIHeader } from '../components/nci-header/nci-header';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
-import '../components/index.scss';
+import { NCIHeader } from '../nci-header/nci-header';
+import { CodeRenderer } from '../code-renderer/code-renderer';
+import '../index.scss';
 
 export default {
   title: 'NCI Header',
@@ -13,19 +13,27 @@ export function Documentation() {
   return <div className="m-2">
     <h1>NCI Header</h1>
     <hr />
-    <p>The NCIHeader component provides a standardized header for applications developed for the NCI.</p>
+    <p>The NCIHeader component provides a standardized header for applications developed for the NCI. This header should adhere to NCI Digital Media guidelines.</p>
 
     <section className="mb-4">
       <h2>Import</h2>
-      <CodeRenderer code="import { NCIHeader } from 'cbiit-react-components/nci-footer/nci-footer';" />
+      <CodeRenderer code="import { NCIHeader } from '@cbiitss/react-components';" />
     </section>
 
     <section className="mb-4">
       <h2>Sample Usage</h2>
       <div className="mb-2">
-        <NCIHeader />
+        <NCIHeader
+          imageSource="assets/images/nci-logo.svg"
+          url="https://cancer.gov"
+        />
       </div>
-      <CodeRenderer removeIndentation code={`<NCIHeader  />`} />
+      <CodeRenderer removeIndentation code={`
+        <NCIHeader
+          imageSource="assets/images/nci-logo.svg"
+          url="https://cancer.gov"
+        />
+      `} />
     </section>
 
 
@@ -91,9 +99,17 @@ export function Examples() {
     <section className="mb-4">
       <h2>Default</h2>
       <div className="mb-2">
-        <NCIHeader />
+        <NCIHeader
+          imageSource="assets/images/nci-logo.svg"
+          url="https://cancer.gov"
+        />
       </div>
-      <CodeRenderer removeIndentation code={`<NCIHeader />`} />
+      <CodeRenderer removeIndentation code={`
+        <NCIHeader
+          imageSource="assets/images/nci-logo.svg"
+          url="https://cancer.gov"
+        />
+      `} />
     </section>
 
     <section className="mb-4">

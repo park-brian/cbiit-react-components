@@ -4,11 +4,11 @@ import {
   paginationText,
   paginationSizeSelector,
   paginationButton,
-} from '../components/table/table';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
+} from '../table/table';
+import { CodeRenderer } from '../code-renderer/code-renderer';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import filterFactory from 'react-bootstrap-table2-filter';
-import '../components/index.scss';
+import '../index.scss';
 
 export default {
   title: 'Table',
@@ -50,7 +50,7 @@ export function Documentation() {
 
     <section className="mb-4">
       <h2>Import</h2>
-      <CodeRenderer code={`import { Table } from 'cbiit-react-components/table/table';`} />
+      <CodeRenderer code={`import { Table } from '@cbiitss/react-components';`} />
     </section>
 
     <section className="mb-4">
@@ -187,7 +187,7 @@ export function Examples() {
           paginationText,
           paginationSizeSelector,
           paginationButton,
-        } from '../components/table/table';
+        } from '../table/table';
         import paginationFactory from 'react-bootstrap-table2-paginator';
         import filterFactory from 'react-bootstrap-table2-filter';
 

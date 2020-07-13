@@ -1,8 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { ButtonGroup } from '../components/button-group/button-group';
-import { CodeRenderer } from '../components/code-renderer/code-renderer';
-import '../components/index.scss';
+import { ButtonGroup } from '../button-group/button-group';
+import { CodeRenderer } from '../code-renderer/code-renderer';
+import '../index.scss';
 
 export default {
     title: 'ButtonGroup',
@@ -17,7 +17,7 @@ export function Documentation() {
 
         <section className="mb-4">
             <h2>Import</h2>
-            <CodeRenderer code="import { ButtonGroup } from cbiit-react-components/components/button-group/button-group;" />
+            <CodeRenderer code="import { ButtonGroup } from '@cbiitss/react-components';" />
         </section>
 
         <section className="mb-4">
